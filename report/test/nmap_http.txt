@@ -1,0 +1,44 @@
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-16 19:05 EET
+NSE: Loaded 67 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 19:05
+Completed Parallel DNS resolution of 1 host. at 19:05, 0.00s elapsed
+Initiating Connect Scan at 19:05
+Scanning csp1.zte.com.cn (192.168.1.1) [1 port]
+Discovered open port 80/tcp on 192.168.1.1
+Completed Connect Scan at 19:05, 0.00s elapsed (1 total ports)
+Initiating Service scan at 19:05
+Scanning 1 service on csp1.zte.com.cn (192.168.1.1)
+Completed Service scan at 19:05, 6.08s elapsed (1 service on 1 host)
+NSE: Script scanning 192.168.1.1.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.76s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+Nmap scan report for csp1.zte.com.cn (192.168.1.1)
+Host is up, received user-set (0.00030s latency).
+Scanned at 2018-12-16 19:05:36 EET for 7s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Mini web server 1.0 (ZTE ZXV10 W300 ADSL router http config)
+|_http-server-header: Mini web server 1.0 ZTE corp 2005.
+Service Info: OS: Linux 2.4.17; Device: broadband router; CPE: cpe:/h:zte:zxv10_w300, cpe:/o:montavista:linux_kernel:2.4.17
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.42 seconds

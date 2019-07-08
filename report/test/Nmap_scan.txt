@@ -1,0 +1,60 @@
+Starting Nmap 7.70 ( https://nmap.org ) at 2018-12-16 19:04 EET
+NSE: Loaded 148 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 19:04
+Completed NSE at 19:04, 0.00s elapsed
+Initiating NSE at 19:04
+Completed NSE at 19:04, 0.00s elapsed
+Initiating Ping Scan at 19:04
+Scanning 192.168.1.1 [2 ports]
+Completed Ping Scan at 19:04, 0.00s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 19:04
+Completed Parallel DNS resolution of 1 host. at 19:04, 0.00s elapsed
+Initiating Connect Scan at 19:04
+Scanning csp1.zte.com.cn (192.168.1.1) [65535 ports]
+Discovered open port 53/tcp on 192.168.1.1
+Discovered open port 80/tcp on 192.168.1.1
+Discovered open port 52869/tcp on 192.168.1.1
+Completed Connect Scan at 19:05, 8.28s elapsed (65535 total ports)
+Initiating Service scan at 19:05
+Scanning 3 services on csp1.zte.com.cn (192.168.1.1)
+Completed Service scan at 19:05, 21.02s elapsed (3 services on 1 host)
+NSE: Script scanning 192.168.1.1.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 8.78s elapsed
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+Nmap scan report for csp1.zte.com.cn (192.168.1.1)
+Host is up (0.019s latency).
+Not shown: 65529 closed ports
+PORT      STATE    SERVICE VERSION
+23/tcp    filtered telnet
+53/tcp    open     domain  (generic dns response: NOTIMP)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+80/tcp    open     http    Mini web server 1.0 (ZTE ZXV10 W300 ADSL router http config)
+|_http-favicon: Unknown favicon MD5: 5E966BB5036DC2624A0187A91E59D3DD
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: Mini web server 1.0 ZTE corp 2005.
+|_http-title: &#90;&#88;&#72;&#78;&#32;&#72;&#49;&#54;&#56;&#78;
+443/tcp   filtered https
+51005/tcp filtered unknown
+52869/tcp open     upnp    Portable SDK for UPnP devices 1.6.6 (UPnP 1.0)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.70%I=7%D=12/16%Time=5C1685CD%P=x86_64-unknown-linux-gnu%
+SF:r(DNSVersionBindReqTCP,20,"\0\x1e\0\x06\x81\x85\0\x01\0\0\0\0\0\0\x07ve
+SF:rsion\x04bind\0\0\x10\0\x03")%r(DNSStatusRequestTCP,E,"\0\x0c\0\0\x90\x
+SF:04\0\0\0\0\0\0\0\0");
+Service Info: OSs: Linux 2.4.17, Linux; Device: broadband router; CPE: cpe:/h:zte:zxv10_w300, cpe:/o:montavista:linux_kernel:2.4.17, cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+Initiating NSE at 19:05
+Completed NSE at 19:05, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 38.84 seconds

@@ -1,0 +1,65 @@
+{
+    "commands":[
+        {
+            "service":"ftp",
+            "command":"nmap",
+            "name":"nmap_ftp",
+            "logfile":"report/nmap_ftp.txt",
+            "args":["$target","-sV", "-Pn", "-vv", "-p","$port","--script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221"]
+
+        },
+        {
+            "service":"smb",
+            "command":"nmap",
+            "name":"nmap_smb",
+            "logfile":"report/nmap_smb.txt",
+            "args":["$target","-sV","-Pn","-vv","-p","$port","--script=smb-vuln*","--script-args=unsafe=1"]
+        },
+        {
+            "service":"smb",
+            "command":"enum4linux",
+            "name":"enum4linux",
+            "logfile":"report/enum4linux.txt",
+            "args":["$target"]
+
+        },
+        {
+            "service":"smb",
+            "command":"nmap",
+            "name":"nmap_smb_users",
+            "logfile":"report/nmap_smb_users.txt",
+            "args":["-sV","-Pn","-vv","-p","$port","--script=smb-enum-users","$target"]
+
+        },
+        {
+            "service":"http",
+            "command":"nmap",
+            "name":"nmap_http",
+            "logfile":"report/nmap_http.txt",
+            "args":["$target","-sV","-Pn","-vv","-p","$port","--script=http-vuln*","--script-args=unsafe=1"]
+        },
+        {
+            "service":"http",
+            "command":"nikto",
+            "name":"nikto",
+            "logfile":"report/nikto.txt",
+            "args":["-h","$target","-port","$port"]
+        },
+
+        {
+            "service":"https",
+            "command":"nmap",
+            "name":"nmap_http",
+            "logfile":"report/nmap_http.txt",
+            "args":["$target","-sV","-Pn","-vv","-p","$port","--script=http-vuln*","--script-args=unsafe=1"]
+        },
+        {
+            "service":"https",
+            "command":"nikto",
+            "name":"nikto",
+            "logfile":"report/nikto.txt",
+            "args":["-h","$target","-port","$port"]
+        }
+
+    ]
+}
